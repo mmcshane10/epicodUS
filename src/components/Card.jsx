@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/js/cards.js';
-
+import { Link } from 'react-router-dom';
 
 function Card(props){
+  var nameStyle = {
+    color: '#420000'
+  };
   return(
     <div className='col s12 m6 l4'>
       <div className='card'>
@@ -12,8 +14,8 @@ function Card(props){
           <img className="activator" src={props.img}/>
         </div>
         <div className="card-content">
-          <span className="card-title activator grey-text text-darken-4">{props.name}<i className="material-icons right">more_vert</i></span>
-          <p><a href="#">Full Bio</a></p>
+          <span className="card-title activator grey-text text-darken-4" style={nameStyle}>{props.name}<i className="material-icons right">more_vert</i></span>
+          <p><Link to='/profile'>Full Bio</Link></p>
         </div>
         <div className="card-reveal">
           <span className="card-title grey-text text-darken-4">About {props.name}<i className="material-icons right">close</i></span>

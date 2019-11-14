@@ -1,20 +1,15 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './Header';
-import UsImg from './UsImg';
-import Intro from './Intro';
-import CardList from './CardList';
+import HomePage from './HomePage';
+import ProfilePage from './ProfilePage';
 
 function App() {
   return (
     <div>
-      <Header/>
-      <UsImg/>
-      <Intro/>
-      <CardList/>
-      {/* <Switch>
-          <Route exact path='/' component={} />
-        </Switch> */}
+      <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/profile' component={ProfilePage} />
+        </Switch>
     </div>
   );
 }

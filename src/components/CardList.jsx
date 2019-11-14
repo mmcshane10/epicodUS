@@ -121,8 +121,12 @@ var cardList = [
 ];
 
 function CardList(){
+  var marginStyle = {
+    marginLeft: '10%',
+    marginRight: '10%'
+  };
   return(
-    <div className="row">
+    <div className="row" style={marginStyle}>
       {cardList.map((card, index)=>
         <Card
           name={card.name}
