@@ -121,20 +121,18 @@ var cardList = [
 ];
 
 function CardList(){
-  var marginStyle = {
-    marginLeft: '10%',
-    marginRight: '10%'
-  };
   return(
-    <div className="row" style={marginStyle}>
-      {cardList.map((card, index)=>
-        <Card
-          name={card.name}
-          bio={card.bio}
-          img={card.img}
-          key={index}
-        />
-      )}
+    <div className='container'>
+      <div className='row'>
+        {cardList.map((card, index)=>
+          <Card
+            name={card.name}
+            bio={card.bio}
+            img={card.img}
+            key={index}
+          />
+        )}
+      </div>
     </div>
   );
 }
